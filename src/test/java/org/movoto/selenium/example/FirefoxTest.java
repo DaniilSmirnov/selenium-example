@@ -60,7 +60,7 @@ public class FirefoxTest {
                 (new WebDriverWait(driver, 3))
                         .until(new ExpectedCondition<Boolean>() {
                             public Boolean apply(WebDriver d) {
-                                return d.getTitle().equals("我眼中软件工程人员该有的常识");
+                                return d.getTitle().equals("Lina!=Gelya");
                             }
                         })
         );
