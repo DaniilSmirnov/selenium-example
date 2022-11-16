@@ -19,9 +19,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by haozuo on 3/23/16.
- */
+
 public class FirefoxTest {
 
     private String testUrl;
@@ -55,12 +53,11 @@ public class FirefoxTest {
         //Click the selected button
         elements.get(0).click();
 
-
         assertTrue("The page title should be chagned as expected",
                 (new WebDriverWait(driver, 3))
                         .until(new ExpectedCondition<Boolean>() {
                             public Boolean apply(WebDriver d) {
-                                return d.getTitle().equals("我眼中软件工程人员该有的常识");
+                                return d.getTitle().equals("Lina!=Gelya");
                             }
                         })
         );
