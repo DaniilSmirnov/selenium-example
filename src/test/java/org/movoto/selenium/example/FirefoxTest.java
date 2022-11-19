@@ -48,19 +48,17 @@ public class FirefoxTest {
     @Test
     public void testTitle() throws IOException {
 
-        // Find elements by attribute lang="READ_MORE_BTN"
-        List<WebElement> elements = driver
-                .findElements(By.cssSelector("[lang=\"READ_MORE_BTN\"]"));
+        // Найти элементы по классу
+      allProductsButton = driver.findElement(By.className("login_all_products_button"));
 
-        //Click the selected button
-        elements.get(0).click();
+       //Нажать на выбранную кнопку
+       allProductsButton.click();
 
-
-        assertTrue("The page title should be chagned as expected",
+        assertTrue("Проверяем что название страницы соответсвует ожидаемому",
                 (new WebDriverWait(driver, 3))
                         .until(new ExpectedCondition<Boolean>() {
                             public Boolean apply(WebDriver d) {
-                                return d.getTitle().equals("Lina!=Gelya");
+                                return d.getTitle().equals("Проекты | ВКонтакте");
                             }
                         })
         );
